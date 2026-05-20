@@ -1,10 +1,10 @@
-# 🚗 License Plate Recognition for Qatari Plates (YOLOv8)
+# License Plate Recognition for Qatari Plates (YOLOv8)
 
 This project focuses on developing a robust License Plate Recognition (LPR) system using the YOLOv8 object detection model. It is trained to detect **Qatari license plates** from vehicle images and perform inference on unseen images with high accuracy.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 Capstone_LPR/
@@ -21,7 +21,7 @@ Capstone_LPR/
 
 ---
 
-## 📸 Inference: Before and After
+## Inference: Before and After
 
 The `testing_images/` folder contains visual examples of the model’s inference performance:
 
@@ -33,11 +33,11 @@ The `testing_images/` folder contains visual examples of the model’s inference
 These image pairs show the model's ability to locate license plates across various vehicle and plate sizes.
 
 ---
-## 📊 Dataset
+## Dataset
 
 This project uses the publicly available **Qatari license plate dataset** from Roboflow.
 
-- 📎 Source: [Roboflow - Qatar Number Plate](https://universe.roboflow.com/rao-waqas/qatar-number-plate/dataset/5)
+- Source: [Roboflow - Qatar Number Plate](https://universe.roboflow.com/rao-waqas/qatar-number-plate/dataset/5)
 - Dataset includes **1,034 annotated images** of Qatari license plates, all labeled with bounding boxes in YOLO format.
 - The data was automatically split via Roboflow into:
   - **80% training set** (~827 images)
@@ -47,7 +47,7 @@ This project uses the publicly available **Qatari license plate dataset** from R
 
 ---
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 1. **Clone the repository**
    ```bash
@@ -72,7 +72,7 @@ This project uses the publicly available **Qatari license plate dataset** from R
 
 ---
 
-## 🧪 Inference
+## Inference
 
 Run the detection on a test image:
 
@@ -87,17 +87,17 @@ The script will:
 
 ---
 
-### ⚠️ Before running, update the following paths in `testing_script.py`:
+### Before running, update the following paths in `testing_script.py`:
 
 ```python
-# ✅ Load the trained YOLO model
+# Load the trained YOLO model
 model = YOLO("C:/Users/student/Desktop/LPR/lpr_training/weights/best.pt")  # ← update this path
 
-# ✅ Path to the test image
+# Path to the test image
 img_path = "C:/Users/student/Desktop/LPR/testing_images/1.png"             # ← update this path
 ```
 
-✅ Example update:
+Example update:
 ```python
 model = YOLO("lpr_training/weights/best.pt")
 img_path = "testing_images/car1.png"
@@ -107,7 +107,7 @@ img_path = "testing_images/car1.png"
 
 ---
 
-## 📚 Model Training
+## Model Training
 
 The model was trained using the `LPR_QATAR_PLATES.ipynb` notebook:
 
@@ -123,20 +123,20 @@ The training outputs (in `lpr_training/`) include:
 
 ---
 
-## 🚧 Notes
+## Notes
 
 - Ensure you adjust the `paths` in the notebook or scripts if you use a different directory structure.
 
 ---
 
-## 📜 License & Attribution
+## License & Attribution
 
 - Dataset: © [Rao Waqas on Roboflow](https://universe.roboflow.com/rao-waqas/qatar-number-plate)
 - Model: YOLOv8 by [Ultralytics](https://github.com/ultralytics/ultralytics)
 
 ---
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
 This project was developed as part of a capstone project to apply computer vision techniques to a real-world problem — detecting and localizing Qatari license plates on vehicles using deep learning.  It showcases how object detection models like YOLOv8 can be leveraged for intelligent transportation systems and smart city applications.
 
